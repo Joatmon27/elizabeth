@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>The Girl Named Elizabeth</title>
+    <title>The Girl With The Name Elizabeth</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
     <link href="https://fonts.googleapis.com/css?family=Comfortaa:700" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -18,16 +18,16 @@
     <div id="header" class="animated slideInDown" style="animation-delay:1.8s;">
     <div id="title">The Girl Named Elizabeth</div><br>
     <div id="links">
-        <a href="#skills">Index</a>
-        <a href="#work" style="margin:0px 60px;">Photies</a>
-        <a href="#contact">About</a>
+        <a href="#skills">Information</a>
+        <a href="#work" style="margin:0px 60px;">Meet the Family</a>
+        <a href="#photos">Photos</a>
     </div>
     </div>
 
     <center>
     <div id="middle">
         <div id="tagline" class="animated zoomIn" style="animation-delay:1.8s;">
-            Coming October, 2019<br>
+            Arriving October, 2019<br>
             <button class="btn_one">A button</button>
         </div>
     </div>
@@ -35,49 +35,57 @@
 
     <div id="portfolio">
              <div id="skills">
-                 <h1>Index</h1>   
+                 <h1>Information</h1>   
                  <div>
                         <p>
-                            We are expecting a girl.  This is her website
+                            We’re thrilled to announce that we’re expecting a girl.  Welcome to Elizabeth Ariella’s website.  (If she’s anything like her dad, she’ll be a tech wiz too and edit this to her liking as soon as she is able to.)
                         </p>
                  </div> 
              </div>
          
               <div id="work">
-                 <h1>Photies</h1>
+                 <h1>Meet the Family</h1>
 
                  <div class="project">
-                 <h2>Photioes coming soon</h2>
-                 <div>We will add photies as things move along</div>
-                 <button class="btn_one">Find JvR Photography on Facebook</button>
+                 <h2>Parents</h2>
+                 <div>Malissa Janse van Rensburg</div>
+                 <div>Paul-Willem Janse van Rensburg</div>
                 </div>
 
-                <!-- <div class="project">
-                 <h2>project title 2</h2>
-                 <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In bibendum tincidunt nulla, id semper mi cursus ac. Fusce turpis urna, condimentum sit amet dolor at, vulputate ultrices massa. Vestibulum non euismod nulla, eu pretium risus. Curabitur porta molestie vulputate.Lorem ipsum dolor sit amet, consectetur adipiscing elit. In bibendum tincidunt nulla, id semper mi cursus ac. Fusce turpis urna, condimentum sit amet dolor at, vulputate ultrices massa. Vestibulum non euismod nulla, eu pretium risus. Curabitur porta molestie vulputate.
-                 </div>
-                 <button class="btn_one">visit project</button>
-                 <button class="btn_two">code</button>
-                </div> -->
+                <div class="project">
+                <h2>Grandparents</h2>
+                <div>Kitta and Nico Janse van Rensburg</div>
+                <div>Liesel Hulme</div>
+               </div>
+
+               <div class="project">
+               <h2>Aunts and Uncles</h2>
+               <div>Elrene and Alwyn Burger</div>
+               <div>Simone and Claude Furniss</div>
+              </div>
+
+               <div class="project">
+               <h2>Godparents</h2>
+               <div>Andre Darth Vader Crouse</div>
+              </div>
 
              </div>
          
-              <div id="contact">
-                 <h1>About</h1> 
-                 <div>Coming October 2019</div>
-                 <form>
-                     <input type="text" placeholder="name" required>
-                     <input type="email" placeholder="email" required><br>
-                     <textarea placeholder="your message" required rows="5"></textarea><br>
-                     <button class="btn_one">send</button>
-                 </form> 
-                 <div id="details">
-                    <a class="btn_social"><i class="fas fa-phone"></i></a>
-                    <a class="btn_social"><i class="fas fa-at"></i></a>
-                    <a class="btn_social"><i class="fab fa-twitter"></i></a>
-                    <a class="btn_social"><i class="fab fa-dribbble"></i></a>
-                 </div>   
-             </div>
+             <div id="photos">
+                <h1>Photos</h1> 
+                <?php
+                    $files = scandir('~/img/');
+                    foreach($files as $file) {
+                        if($file !== "." && $file !== "..") {
+                            echo "<img src='$file' width=250/>";
+                        }
+                    }
+                ?> 
+                <div id="details">
+                   <a class="btn_social" href="https://twitter.com/paulwillemjvr"><i class="fab fa-twitter">Paul-Willem</i></a>
+                   <a class="btn_social" href="https://twitter.com/jvrpics"><i class="fab fa-twitter">Malissa</i></a>
+                </div>   
+            </div>
     </div>
     <div id="footer">
         made on earth by a human <br><br> <a href="https://imfunniee.github.io">imfunniee</a>
